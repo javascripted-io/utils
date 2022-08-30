@@ -1,0 +1,13 @@
+{
+  "name": "utils",
+  "version": "0.0.0",
+  "description": "General utility functions",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^0.22.1"
+  },
+  "scripts": {
+    "test": "vitest"
+  }
+}
