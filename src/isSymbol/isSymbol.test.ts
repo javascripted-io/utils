@@ -1,9 +1,9 @@
-import isDate from "./index"
+import isSymbol from "./index"
 import { describe, expect, it } from "vitest"
 
-describe("isDate", () => {
-    it("should return true when value is a Date", () => {
-        expect(isDate(new Date())).toBe(true)
+describe("isSymbol", () => {
+    it("should return true when value is a Smybol", () => {
+        expect(isSymbol(Symbol())).toBe(true)
     })
 
     it.each([
@@ -26,15 +26,15 @@ describe("isDate", () => {
         ["an ArrayBuffer", new ArrayBuffer(2)],
         ["a BigUint64Array", new BigUint64Array()],
         ["a Buffer", Buffer.alloc(2)],
+        ["a Date", new Date()],
         ["an Error", new Error()],
         ["a Map", new Map()],
         ["a Uint8Array", new Uint8Array()],
         ["a Uint8ClampedArray", new Uint8ClampedArray()],
         ["a Uint16Array", new Uint16Array()],
         ["a Uint32Array", new Uint32Array()],
-        ["a Regex", /x/],
-        ["a Symbol", Symbol()]
+        ["a Regex", /x/]
     ])("should return false when value is %s", (_, value) =>{
-        expect(isDate(value)).toBe(false)
+        expect(isSymbol(value)).toBe(false)
     })
 })

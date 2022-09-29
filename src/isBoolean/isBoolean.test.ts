@@ -8,6 +8,7 @@ describe("isBoolean", () => {
 
     it.each([
         ["Infinity", Infinity],
+        ["-Infinity", -Infinity],
         ["NaN", NaN],
         ["undefined", undefined],
         ["null", null],
@@ -21,7 +22,9 @@ describe("isBoolean", () => {
         ["a string", "foo"],
         ["an array", []],
         ["an object", {}],
+        ["an ArrayBuffer", new ArrayBuffer(2)],
         ["a BigUint64Array", new BigUint64Array()],
+        ["a Buffer", Buffer.alloc(2)],
         ["a Date", new Date()],
         ["an Error", new Error()],
         ["a Map", new Map()],

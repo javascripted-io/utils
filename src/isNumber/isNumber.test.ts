@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest"
 describe("isNumber", () => {
     it.each([
         ["Infinity", Infinity],
+        ["-Infinity", -Infinity],
         ["NaN", NaN],
         ["a positive integer", 1],
         ["a negative integer", -1],
@@ -23,7 +24,9 @@ describe("isNumber", () => {
         ["a string", "foo"],
         ["an array", []],
         ["an object", {}],
+        ["an ArrayBuffer", new ArrayBuffer(2)],
         ["a BigUint64Array", new BigUint64Array()],
+        ["a Buffer", Buffer.alloc(2)],
         ["a Date", new Date()],
         ["an Error", new Error()],
         ["a Map", new Map()],

@@ -1,4 +1,4 @@
-import { instanceGaurd } from "../guard"
+import { instanceGuard } from "../guard"
 
 /**
  * Check if a value is an Error or not.
@@ -6,4 +6,4 @@ import { instanceGaurd } from "../guard"
  * @param {*} value - value to check
  * @returns {boolean} whether or not value is an Error
  */
-export default instanceGaurd(Error)
+export default instanceGuard(Error)

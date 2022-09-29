@@ -1,9 +1,9 @@
-import isDate from "./index"
+import isArrayBuffer from "./index"
 import { describe, expect, it } from "vitest"
 
-describe("isDate", () => {
-    it("should return true when value is a Date", () => {
-        expect(isDate(new Date())).toBe(true)
+describe("isArrayBuffer", () => {
+    it("should return true when value is an array", () => {
+        expect(isArrayBuffer(new ArrayBuffer(2))).toBe(true)
     })
 
     it.each([
@@ -23,9 +23,9 @@ describe("isDate", () => {
         ["a string", "foo"],
         ["an array", []],
         ["an object", {}],
-        ["an ArrayBuffer", new ArrayBuffer(2)],
         ["a BigUint64Array", new BigUint64Array()],
         ["a Buffer", Buffer.alloc(2)],
+        ["a Date", new Date()],
         ["an Error", new Error()],
         ["a Map", new Map()],
         ["a Uint8Array", new Uint8Array()],
@@ -35,6 +35,6 @@ describe("isDate", () => {
         ["a Regex", /x/],
         ["a Symbol", Symbol()]
     ])("should return false when value is %s", (_, value) =>{
-        expect(isDate(value)).toBe(false)
+        expect(isArrayBuffer(value)).toBe(false)
     })
 })

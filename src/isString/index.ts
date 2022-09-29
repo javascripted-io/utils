@@ -1,4 +1,4 @@
-import { typeGaurd } from "../guard"
+import { typeofGuard } from "../guard"
 
 /**
  * Check if a value is a string or not.
@@ -6,4 +6,4 @@ import { typeGaurd } from "../guard"
  * @param {*} value - value to check
  * @returns {boolean} whether or not value is a string
  */
-export default typeGaurd("string")
+export default typeofGuard("string")

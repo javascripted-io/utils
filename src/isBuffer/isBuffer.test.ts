@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest"
 
 describe("isBuffer", () => {
     it("should return true when value is a Buffer", () => {
-        expect(isBuffer(new Buffer(2))).toBe(true)
+        expect(isBuffer(Buffer.alloc(2))).toBe(true)
     })
 
     it.each([
@@ -23,6 +23,7 @@ describe("isBuffer", () => {
         ["a string", "foo"],
         ["an array", []],
         ["an object", {}],
+        ["an ArrayBuffer", new ArrayBuffer(2)],
         ["a BigUint64Array", new BigUint64Array()],
         ["a Date", new Date()],
         ["an Error", new Error()],
