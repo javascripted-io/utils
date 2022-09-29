@@ -1,14 +1,43 @@
 {
-  "name": "utils",
-  "version": "0.0.0",
+  "bugs": {
+    "url": "https://github.com/javascripted-io/utils/issues"
+  },
   "description": "General utility functions",
-  "main": "index.js",
-  "license": "MIT",
   "devDependencies": {
     "jsdom": "^20.0.0",
     "vitest": "^0.22.1"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/utils.js",
+      "require": "./dist/utils.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/javascripted-io/utils#readme",
+  "keywords": [
+    "javascript",
+    "functions",
+    "library",
+    "methods",
+    "typescript",
+    "utilities",
+    "utils"
+  ],
+  "license": "MIT",
+  "main": "./dist/utils.umd.cjs",
+  "module": "./dist/utils.js",
+  "name": "@javascripted/utils",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/javascripted-io/utils.git"
+  },
   "scripts": {
+    "build": "vite build",
     "test": "vitest"
-  }
+  },
+  "type": "module",
+  "version": "0.0.1"
 }
