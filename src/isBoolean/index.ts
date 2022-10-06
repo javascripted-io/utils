@@ -6,4 +6,4 @@ import { typeofGuard } from "../guard"
  * @param {*} value - value to check
  * @returns {boolean} whether or not value is a boolean
  */
-export default typeofGuard("boolean")
+export default typeofGuard<boolean>("boolean")

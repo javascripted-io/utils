@@ -6,4 +6,4 @@ import { typeofGuard } from "../guard"
  * @param {*} value - value to check
  * @returns {boolean} whether or not value is a string
  */
-export default typeofGuard("string")
+export default typeofGuard<string>("string")

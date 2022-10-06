@@ -1,5 +1,3 @@
-import { instanceGuard } from "../guard"
-
 /**
  * Check if a value is a Symbol or not.
  *

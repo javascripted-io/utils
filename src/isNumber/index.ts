@@ -6,4 +6,4 @@ import { typeofGuard } from "../guard"
  * @param {*} value - value to check
  * @returns {boolean} whether or not value is a number
  */
-export default typeofGuard("number")
+export default typeofGuard<number>("number")

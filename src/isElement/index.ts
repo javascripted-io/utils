@@ -1,4 +1,3 @@
-import { ArgumentsType } from "vitest";
 import { instanceGuard } from "../guard"
 
 const guard = instanceGuard(global.Element)
