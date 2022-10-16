@@ -4,9 +4,9 @@
   },
   "description": "General utility functions",
   "devDependencies": {
-    "jsdom": "^20.0.0",
+    "jsdom": "^20.0.1",
     "typescript": "^4.8.4",
-    "vitest": "^0.22.1"
+    "vitest": "^0.24.3"
   },
   "exports": {
     ".": {
@@ -42,5 +42,5 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "0.0.5"
+  "version": "0.0.6"
 }
